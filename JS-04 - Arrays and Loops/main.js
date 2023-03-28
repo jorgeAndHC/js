@@ -1,31 +1,34 @@
 /*
-Personas en el Banco
-+---------------------------+
-| Sofía                     |0
-+---------------------------+
-|   David                   |1
-+---------------------------+
-|     Juan                  |2
-+---------------------------+
+Personas
++-----------+
+| SOfia     |0
++-----------+
+|   David   |1
++-----------+
+| Juan      |2
++-----------+
 */ 
-let bancoPersonas=["Sofía","David","Juan"];
+// ----------------------Parte 1-----------------------------------
+let P_en_Fila=["Sofía", "David","Juan"];
 
-console.log(bancoPersonas.length); // Da el número 2 en la consola
+console.log(P_en_Fila.length); 
 let divAlert = document.getElementById("divAlert")
 
-
-bancoPersonas[3]="sara";
-bancoPersonas[4]="Augustin"; // el push pone el elemento al final de la fila
-
-// console.log(bancoPersonas.shift()); //lo quita y lo manda hasta abajo 
+// ----------------------Parte 2-----------------------------------------
+P_en_Fila.push("Sara","Agustin"); // el push pone a Sara y agustin al final de la fila
+P_en_Fila.shift();
 
 
+// ------------------------Parte 3------------------------------------
+P_en_Fila.splice(1,0, "Renata");
+P_en_Fila.push("Elena");
+P_en_Fila.shift();
 
-divAlert.innerHTML = bancoPersonas.length + "<strong> Personas </strong>" ;
 
-divAlert.innerHTML += "<ol><li>" + bancoPersonas[0]+ "</li>"   
-+ "<li>" +bancoPersonas[1]+ "</li>" 
-+ "<li>" +bancoPersonas[2]+ "</li>"
-"<li>" +bancoPersonas[3]+ "</li>"
-"<li>" +bancoPersonas[4]+ "</li> </ol>";
-// se concateno todo dentro el primer divAlert para que agarre el ol
+divAlert.innerHTML = P_en_Fila.length + " Personas";
+
+divAlert.innerHTML += "<ol><li>" +P_en_Fila[0]+ "</li>"  
++ "<li>" +P_en_Fila[1]+ "</li>"  
++ "<li>" +P_en_Fila[2]+ "</li>" 
++ "<li>" +P_en_Fila[3]+ "</li>"  
++ "<li>" +P_en_Fila[4]+ "</li> </ol>";
